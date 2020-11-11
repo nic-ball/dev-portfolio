@@ -1,19 +1,31 @@
 import React from 'react';
 import logo from './nic-logo.png';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Contact from './components/Contact.js';
+import Projects from './components/Projects.js';
+import About from './components/About.js'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className="navigation">
-        <img src={logo} className="logo" alt="Logo" />
-        <div className="navigation-sub">
-          <a href="" className="item">Contact</a>
-          <a href="" className="item">Projects</a>
-          <a href="" className="item">About</a>
+    <BrowserRouter>
+      <div className="App">
+        <Route exact path="/" component={Projects} />
+        <Route path="/About" component={About} />
+        <Route path="/Contact" component={Contact} />
+
+        <div className="navigation">
+          <img src={logo} className="logo" alt="Logo" />
+          <div className="navigation-sub">
+
+            <Link to="/" className="item">Projects</Link>
+            <Link to="/about" className="item">About</Link>
+            <Link to="/contact" className="item">Contact</Link>
+
+          </div>
         </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
