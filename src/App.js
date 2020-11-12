@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './nic-logo.png';
+import logo from './nic-logo.JPG';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Contact from './components/Contact.js';
-import Projects from './components/Projects.js';
-import About from './components/About.js'
+import Contact from './Contact.js';
+import Projects from './Projects.js';
+import About from './About.js'
 import './App.css';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/Contact" component={Contact} />
 
         <div className="navigation">
-          <img src={logo} className="logo" alt="Logo" />
+          <img src={logo} className="logo" width="33%" alt="Logo" />
           <div className="navigation-sub">
 
             <Link to="/" className="item">Projects</Link>
